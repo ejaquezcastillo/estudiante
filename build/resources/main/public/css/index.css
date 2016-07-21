@@ -1,0 +1,79 @@
+body {
+    background-color: whitesmoke;
+}
+
+form {
+    display: inline-block;
+}
+
+table {
+    width: 100%;
+}
+
+table tr {
+    margin: auto;
+    border: 1px solid black;
+    height: 10px;
+}
+
+table th {
+    margin: auto;
+    border: 1px solid black;
+}
+
+table td {
+    margin: auto;
+    border: 1px solid black;
+}
+
+tr.selected td
+{
+    background-color: #d1db3e;
+    color: white;
+}
+
+h1 {
+    margin: auto;
+}
+
+h3 {
+    margin: auto;
+}
+
+p {
+    margin: auto;
+}
+
+.box {
+    margin: auto;
+    width: 1000px;
+    text-align: center;
+}
+
+#container {
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#header {
+    background-color: darkcyan;
+    color: white;
+}
+
+#registry {
+    margin: auto;
+    background-color:white;
+    height: 450px;
+    overflow: auto;
+}
+
+#footer {
+    background-color: darkcyan;
+    color: white;
+    margin-bottom: 0px;
+}
+
+#buttons {
+    margin-right: 200px;
+}
+
