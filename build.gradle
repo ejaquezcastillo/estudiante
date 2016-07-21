@@ -12,7 +12,7 @@ applicationName = 'app'
 defaultTasks = ['stage']
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '2.3'
+    gradleVersion = '1.6'
 }
 
 task stage(type: Copy, dependsOn: [clean, build]) {
@@ -45,5 +45,8 @@ dependencies {
     // H2 Data Base
     compile group: 'com.h2database', name: 'h2', version: '1.4.192'
 
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
     compile group: 'com.sparkjava', name: 'spark-template-freemarker', version: '2.0.0'
 }
+
