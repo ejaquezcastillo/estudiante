@@ -1,8 +1,9 @@
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
-apply plugin: 'application'
 apply plugin: 'jetty'
+apply plugin: 'application'
+
 
 sourceCompatibility = 1.8
 archivesBaseName = "app"
@@ -10,13 +11,19 @@ mainClassName = 'Main'
 applicationName = 'app'
 
 
-defaultTasks = ['stage']
-task wrapper(type: Wrapper) {
-    gradleVersion = '1.6'
-}
 repositories {
     mavenCentral()
 }
+
+defaultTasks = ['stage']
+
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '1.6'
+}
+
+
+
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
     // SparkJava Library
