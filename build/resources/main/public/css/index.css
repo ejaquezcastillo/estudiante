@@ -1,5 +1,5 @@
 body {
-    background-color: whitesmoke;
+    background-color: lightblue;
 }
 
 form {
@@ -12,24 +12,24 @@ table {
 
 table tr {
     margin: auto;
-    border: 1px solid black;
+    border: 1px solid darkblue;
     height: 10px;
 }
 
 table th {
     margin: auto;
-    border: 1px solid black;
+    border: 1px solid darkblue;
 }
 
 table td {
     margin: auto;
-    border: 1px solid black;
+    border: 1px solid darkblue;
 }
 
 tr.selected td
 {
     background-color: #d1db3e;
-    color: white;
+    color:#000;
 }
 
 h1 {
@@ -46,34 +46,31 @@ p {
 
 .box {
     margin: auto;
-    width: 1000px;
+
+    width: 500px;
+
     text-align: center;
 }
 
 #container {
-    border: 1px solid black;
+    border: 1px solid darkblue;
     border-radius: 5px;
 }
 
 #header {
-    background-color: darkcyan;
+    background-color: darkblue;
     color: white;
 }
 
 #registry {
     margin: auto;
-    background-color:white;
-    height: 450px;
+    background-color: dodgerblue;
+    height: 300px;
     overflow: auto;
 }
 
 #footer {
-    background-color: darkcyan;
+    background-color: darkblue;
     color: white;
     margin-bottom: 0px;
 }
-
-#buttons {
-    margin-right: 200px;
-}
-

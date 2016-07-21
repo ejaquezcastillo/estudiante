@@ -1,70 +1,70 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>ESTUDIANTES DB</title>
-    <link type="text/css" rel="stylesheet" href="css/index.css" />
-</head>
-<body>
-<div class="box" id="container">
-    <!-- Header -->
-    <div class="box" id="header">
-        <h1>${message}</h1>
-    </div>
+    <head>
+        <title>AcademiaDB-HOME</title>
+        <link type="text/css" rel="stylesheet" href="css/index.css" />
+    </head>
+    <body>
+        <div class="box" id="container">
+            <!-- Header -->
+            <div class="box" id="header">
+                <h1>${message}</h1>
+            </div>
 
-    <br>
+            <br>
 
-    <!-- Registry -->
-    <div class="box" id="registry">
-        <table>
-            <thead>
-            <tr>
-                <th colspan="4">REGISTRO DE ESTUDIANTE</th>
-            </tr>
-            <tr>
-                <th>MATRICULA</th>
-                <th>NOMBRES</th>
-                <th>APELLIDOS</th>
-                <th>TELEFONO</th>
-            </tr>
-            </thead>
-            <tbody>
-            <#list Registry?sort_by("matricula") as student>
-            <tr>
-                <td>${student.getMatricula()}</td>
-                <td>${student.getName()}</td>
-                <td>${student.getLastName()}</td>
-                <td>${student.getTelephone()}</td>
-            </tr>
-            </#list>
-            </tbody>
-        </table>
-    </div>
+            <!-- Registry -->
+            <div class="box" id="registry">
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="4">Student Registry</th>
+                        </tr>
+                        <tr>
+                            <th>Matricula</th>
+                            <th>Name</th>
+                            <th>Last Name</th>
+                            <th>Telephone</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <#list Registry?sort_by("matricula") as student>
+                            <tr>
+                                <td>${student.getMatricula()}</td>
+                                <td>${student.getName()}</td>
+                                <td>${student.getLastName()}</td>
+                                <td>${student.getTelephone()}</td>
+                            </tr>
+                        </#list>
+                    </tbody>
+                </table>
+            </div>
 
-    <br>
+            <br>
 
-    <!-- Buttons -->
-    <div class="box" id="buttons">
-        <form action="http://localhost:4567/new" method="GET">
-            <input type="submit" name="submit" value="NUEVO ESTUDIANTE">
-        </form>
-        <br>
-        <form action="http://localhost:4567/modify" method="GET">
-            MODIFICAR: <input type="text" name="matricula">
-            <input type="submit" name="submit" value="MODIFICAR">
-        </form>
-        <br>
-        <form action="http://localhost:4567/delete" method="POST">
-            ELIMINAR: <input type="text" name="matricula">
-            <input type="submit" name="submit" value="ELIMINAR">
-        </form>
-    </div>
+            <!-- Buttons -->
+            <div class="box" id="buttons">
+                <form action="http://localhost:4567/new" method="GET">
+                    <input type="submit" name="submit" value="Add New Student">
+                </form>
+                <br>
+                <form action="http://localhost:4567/modify" method="GET">
+                    Modify: <input type="text" name="matricula">
+                    <input type="submit" name="submit" value="Modify Student">
+                </form>
+                <br>
+                <form action="http://localhost:4567/delete" method="POST">
+                    Delete: <input type="text" name="matricula">
+                    <input type="submit" name="submit" value="Delete Student">
+                </form>
+            </div>
 
-    <br>
+            <br>
 
-    <!-- Footer -->
-    <div class="box" id="footer">
-        <p>Copyright ejaquezcastillo</p>
-    </div>
-</div>
-</body>
+            <!-- Footer -->
+            <div class="box" id="footer">
+                <p>Copyrighted &copy; by Djidjelly P. Siclait</p>
+            </div>
+        </div>
+    </body>
 </html>

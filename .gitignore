@@ -3,14 +3,4 @@
 .gradle/
 
 # Output file is no required to commit
-*.iml
-*.ipr
-*.iws
-.DS_Store
-build/dependency-cache/
-build/distributions/
-build/docs/
-build/install/
-build/tmp/compileJava/
-build/tmp/javadoc/
-src/test/
+out/
