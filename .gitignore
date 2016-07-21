@@ -1,0 +1,6 @@
+# Every content inside of .idea .gradle
+.idea/
+.gradle/
+
+# Output file is no required to commit
+out/
