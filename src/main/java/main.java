@@ -13,6 +13,7 @@ import java.util.Map;
 
 import static java.sql.DriverManager.getConnection;
 import static spark.Spark.get;
+import static spark.Spark.port;
 import static spark.Spark.post;
 
 public class Main {
@@ -22,8 +23,16 @@ public class Main {
     public static void main(String[] args) throws Exception{
 
         Spark.staticFileLocation("/public");
-
+        port(getHerokuAssignedPort());
         RunSparkEnvironment();
+    }
+
+    static int getHerokuAssignedPort() {
+        ProcessBuilder processBuilder = new ProcessBuilder();
+        if (processBuilder.environment().get("PORT") != null) {
+            return Integer.parseInt(processBuilder.environment().get("PORT"));
+        }
+        return 4567; //return default port if heroku-port isn't set (i.e. on localhost)
     }
 
     // H2 Database Functions
