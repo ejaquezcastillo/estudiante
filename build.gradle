@@ -9,7 +9,7 @@ archivesBaseName = "app"
 mainClassName = 'Main'
 applicationName = 'app'
 
-defaultTasks = ['stage']
+defaultTasks = ['estudiante']
 
 task wrapper(type: Wrapper) {
     gradleVersion = '1.6'
