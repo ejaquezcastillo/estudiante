@@ -22,7 +22,7 @@ defaultTasks = ['stage']
 
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '2.0'
+    gradleVersion = '1.6'
 }
 
 
@@ -42,4 +42,12 @@ dependencies {
 
 task stage {
     dependsOn: ['clean', 'build', 'installApp']
+}
+
+task wrapper(type: Wrapper)
+        { gradleVersion = '0.8' jarPath = 'gradleWrapper' }
+task testTarDist(type: Tar, dependsOn: 'wrapper') {
+    dirName = 'testWrapper'
+    tarFileSet(dir: '.')
+            { include('gradleWrapper/**') include('gradlew') include('gradlew.bat') prefix = dirName }
 }
