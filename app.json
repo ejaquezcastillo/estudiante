@@ -1,0 +1,17 @@
+{
+  "name": "estudiante",
+  "scripts": {
+  },
+  "env": {
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/ejaquezcastillo/estudiante.git"
+    }
+  ]
+}
