@@ -15,19 +15,6 @@ task wrapper(type: Wrapper) {
     gradleVersion = '1.6'
 }
 
-task stage(type: Copy, dependsOn: [clean, build]) {
-    from jar.archivePath
-    into project.rootDir
-    rename {
-        'app.jar'
-    }
-}
-stage.mustRunAfter(clean)
-
-clean << {
-    project.file('app.jar').delete()
-}
-
 repositories {
     mavenCentral()
 }
@@ -44,9 +31,6 @@ dependencies {
 
     // H2 Data Base
     compile group: 'com.h2database', name: 'h2', version: '1.4.192'
-
-    compileSdkVersion 23
-    buildToolsVersion "23.0.1"
     compile group: 'com.sparkjava', name: 'spark-template-freemarker', version: '2.0.0'
 }
 
