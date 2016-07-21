@@ -2,11 +2,14 @@ version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
 apply plugin: 'application'
-apply plugin: 'application'
+apply plugin: 'distribution'
+
 sourceCompatibility = 1.8
 archivesBaseName = "app"
 mainClassName = 'Main'
 applicationName = 'app'
+
+
 defaultTasks = ['stage']
 task wrapper(type: Wrapper) {
     gradleVersion = '1.6'
@@ -28,5 +31,4 @@ dependencies {
 
 task stage {
     dependsOn installDist
-    x
 }
