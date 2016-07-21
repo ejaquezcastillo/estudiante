@@ -9,7 +9,14 @@ archivesBaseName = "app"
 mainClassName = 'Main'
 applicationName = 'app'
 
-defaultTasks = ['estudiante']
+defaultTasks = ['stage']
+
+task copyToLib(type: Copy) {
+    into "$buildDir/lib"
+    from(configurations.compile)
+}
+
+stage.dependsOn(copyToLib)
 
 task wrapper(type: Wrapper) {
     gradleVersion = '1.6'

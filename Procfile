@@ -1,1 +1,1 @@
-web: ./build/install/app/bin/app
+web: build/install/gradle-getting-started/bin/gradle-getting-started
