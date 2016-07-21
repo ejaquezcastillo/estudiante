@@ -1,1 +1,1 @@
-web: ./build/install/app/bin/app
+web: java -Dserver.port=$PORT -jar app.jar

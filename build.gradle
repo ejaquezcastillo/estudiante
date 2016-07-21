@@ -15,6 +15,19 @@ task wrapper(type: Wrapper) {
     gradleVersion = '1.6'
 }
 
+task stage(type: Copy, dependsOn: [clean, build]) {
+    from jar.archivePath
+    into project.rootDir
+    rename {
+        'app.jar'
+    }
+}
+stage.mustRunAfter(clean)
+
+clean << {
+    project.file('app.jar').delete()
+}
+
 repositories {
     mavenCentral()
 }
@@ -35,6 +48,3 @@ dependencies {
     compile group: 'com.sparkjava', name: 'spark-template-freemarker', version: '2.0.0'
 }
 
-task stage {
-    dependsOn installDist
-}
