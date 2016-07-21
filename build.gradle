@@ -1,4 +1,4 @@
-group 'Programacion Web Practica 2'
+
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
@@ -34,8 +34,4 @@ dependencies {
     compile group: 'com.h2database', name: 'h2', version: '1.4.192'
 
     compile group: 'com.sparkjava', name: 'spark-template-freemarker', version: '2.0.0'
-}
-
-task stage {
-    dependsOn installDist
 }
